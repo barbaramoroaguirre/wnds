@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#abrirVentanaCV{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+#abrirVentanaUX{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.ventana-cv-completa{
+    display: none;
+    z-index: 1000;
+    overflow: hidden ;
+    background-color: #FFF8E6 ;
+    width: 1530px;
+    height: 880px;
+    border: var(--border-light) solid 3px;
+    box-shadow:4px 4px 0px var(--border-dark);
+    position: absolute;
+    bottom: 140px;
+
+}
+
+.barra-ventana{
+    cursor: move; 
+     border-bottom: solid 1px var(--border-dark);
+    background-color: var(--titlebar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: titulo;
+    height: 24px;
+}
+.titulo-cv{
+    color: var(--blanco);
+    font-family: monospace;
+    margin-left: 12px;
+    font-size: 20px;
+}
+.menu-ventana{
+    background-color: var(--menubar-bg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    grid-area: superior;
+    height: 20px;
+    border-bottom: solid 2px #470721;
+}
+.contenido-cv{
+    /*grid-template-columns: 170px 200px 400px 400px 200px 170px;
+    grid-template-rows: 60px 300px 200px 200px 90px;*/
+    position: relative;
+    overflow-y: auto;
+}
+.carnet{
+    width: 400px;
+    height: 255px;
+    background-color: #FFEEF4 ;
+    border-radius: 11px;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:2px 2px 0px var(--border-dark);
+    rotate: -5deg;
+    position: absolute;
+    left: 40px;
+    top: 90px;
+}
+.hoja{
+    background-color: #FFFFFF;
+    height: 852px;
+    width: 700px;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:1px 1px 0px var(--border-dark);
+
+    position: absolute;
+    bottom: 0;
+    top: 30px;
+    left: 390px;
+    display: flex;
+    position: relative;
+    
+}
+.circulo-hoja{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    background-color: var(--border-dark);
+    margin-top: 160px;
+    margin-left: 50px;
+}
+.texto-hoja{
+    width: 70%;
+    margin-left:50px;
+    margin-top: 30px;
+    
+}
+.herramientas-iconos{
+    width: 300px;
+    gap: 12px;
+    
+}
+h2{
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+.titulos-experiencia{
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+    
+}
+
+h3{
+    font-family: monospace;
+    font-size: 20px;
+}
+p{
+    font-family: monospace;
+    font-size: 18px;
+}
+.png-programa{
+    height: 60px;
+    width: 60px;
+    margin-left: 12px;
+}
+
+.ticket{
+    width: 375px;
+    height: 755px;
+    background-color: #FDF8F8;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:2px 2px 0px var(--border-dark);
+    position: absolute;
+    right: 100px;
+    top: 70px;
+    rotate: 7deg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  
+
+    
+}
+.titulos-ticket{
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    margin-left: 16px;
+    
+}
+.ticket-p{
+    font-size: x-large;
+    font-weight: 900;
+    margin-left: 8px;
+    display: block;
+    width: 350px;
+    margin-left: 16px;
+
+
+}
+.ticket-escuelas{
+    font-size: large;
+    font-weight: 800;
+    margin-left: 8px;
+    display: block;
+    width: 350px;
+    margin-left: 16px;
+
+}
+.ticket-li{
+    margin-top: 0px;
+    margin-left: 12px;
+    width: 350px;
+    margin-left: 18px;
+    display: block;
+
+}
+.mi-foto{
+    height: 130px;
+    width: 120px;
+    border-radius: 40px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    border: var(--border-dark) solid 1.2px;
+
+}
+.titulo-carnet{
+    margin-left: 160px;
+    margin-top: 50px;
+}
+.texto-carnet{
+    margin-top: 30px;
+    margin-left: 55px;
+    
+}
+.post-it{
+    height: 285px;
+    width: 285px;
+    background-color: #F6F6FF;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:3px 3px 0px var(--border-dark);
+    position: absolute;
+    top: 410px;
+    left: 60px;
+    rotate: 5deg;
+}

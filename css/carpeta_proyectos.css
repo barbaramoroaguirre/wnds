@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ventana-uxui-completa{
+    height: 700px;
+    width: 900px;
+    background-color: var(--canvas-bg);
+    border: var(--border-light) solid 3px;
+    box-shadow:4px 4px 0px var(--border-dark);
+    position: absolute;
+    bottom: 140px;
+    overflow: hidden ;
+    display: none;
+    z-index: 1000;
+}
+.contenido-carpeta{
+    display: flex;
+    margin-left: 32px;
+    gap: 50px;
+    position: relative
+}
+.proyecto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+.carpeta-proyecto{
+    font-size: 16px
+}
+.previsualizacion{
+    height: 656px;
+    width: 300px;
+    background-color: var(--menubar-bg);
+    position: absolute;
+    right: 0;
+}
+.cuadro-pre{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.cuadro-info{
+    width: 250px;
+    height: 330px;
+    background-color: white;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.titulo-Proyectos-uxui{
+    color: white;
+    margin-left: 8px;
+    font-size: 16px;
+}

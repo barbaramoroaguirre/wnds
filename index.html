@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbara Portfolio</title>
+    <link rel="stylesheet" href="css/estilo_escritorio.css">
+    <link rel="stylesheet" href="css/paint.css">
+    <link rel="stylesheet" href="css/carpeta_proyectos.css">
+    <link rel="stylesheet" href="css/ventana_cv.css">
+    <script defer src="java.js"></script>
+    <script defer src="js/paint.js"></script>
+    <script defer src="js/cs_ventana.js"></script>
+
+</head>
+<body>
+
+    <!--ICONOS-->
+<section class="contenido">
+    <section class="iconos">
+        <button class="carpeta CV" id="abrirVentanaCV">
+            <img class="img-carpeta" src="img/cv.png" alt="CV">
+            <h2 class="nombre-carpeta">Curriculum</h2>
+        </button>
+
+        <div class="carpeta DW">
+            <img class="img-carpeta" src="img/dw.png" alt="DW">
+            <h2 class="nombre-carpeta">Diseño Web</h2>
+        </div>
+
+        <button class="carpeta UXUI" id="abrirVentanaUX">
+            <img class="img-carpeta" src="img/carpeta_ud.png" alt="UXUI">
+            <h2 class="nombre-carpeta">UX/UI</h2>
+        </button>
+
+        <a class="carpeta LINKEDIN" href="https://www.linkedin.com/in/b%C3%A1rbara-moro-aguirre-825255198/">
+            <img class="img-carpeta" src="img/LinkedIn.png" alt="LINKEDIN" ></img>
+            <h2 class="nombre-carpeta">LinkedIn</h2>
+        </a>
+
+    </section>
+
+    <!--BARRA NAV-->
+    <section class="barra">
+        <div class="logo">
+            <h2 class="texto-ventana"></h2>
+        </div>
+        <div class="ventana-paint">
+            <h2 class="texto-ventana">Paint</h2>
+        </div>
+        <div class="hora">
+            <h2 class="texto-ventana" id="reloj">hora</h2>
+        </div>
+    </section>
+
+    <!--NOTA-->
+    <section class="nota">
+        <ol>
+            <li class="lista-nota">diseñar iconos fondo y personaje</li>
+            <li class="lista-nota">actualizar estilos colores</li>
+            <li class="lista-nota">bocadillo personaje</li>
+        </ol>
+    </section>
+    <!--moñeco-->
+    <section class="personaje">
+            <img class="img-personaje" src="img/egg.png" alt="" id="huevo">
+        
+    </section>
+
+    <!--PAINT-->
+    <section class="paint">
+
+        <div class="barra-titulo">
+            <h2 class="titulo-paint">Untitled - Paint 🎨</h2>
+            <div class="barra-titulos-botones">
+                <div class="win-btn" title="Minimizar">_</div>
+                 <div class="win-btn" title="Maximizar">□</div>
+                <div class="win-btn" title="Cerrar">✕</div>
+            </div>
+        </div>
+
+        <div class="menu-superior">
+                <div class="item-menu">Archivo</div>
+                <div class="item-menu">Editar</div>
+                <div class="item-menu">Ver</div>
+        </div>
+
+        <div class="menu-lateral">
+            <div class="tool-btn active" title="Pincel" id="pincel">🖌️</div>
+                <div class="tool-btn" title="Borrador" id="borrador">⬜</div>
+                <div class="tool-btn" title="Linea" id="linea">╱</div>
+                <div class="tool-btn" title="Rectangulo" id="rect">▭</div>
+                <div class="tool-btn" title="Elipse" id="elipse">◯</div>
+                <div class="tool-btn" title="Relleno" id="relleno">🪣</div>
+                <div class="tool-btn" title="Texto" id="text">A</div>
+                <div class="tool-btn" title="Selector" id="selector">⊹</div>
+                <div class="tool-btn" title="Cuentagotas" id="Cuentagotas">💉</div>
+                <div class="tool-btn" title="zoom" id="zoom">🔍</div>
+        </div>
+
+        <canvas class="lienzo" id="canvas"></canvas>
+
+        <div class="scroll">
+            <div class="arriba">▶</div>
+            <div class="barrita"></div>
+            <div class="abajo">▶</div>
+        </div>
+
+        <div class="seccion-colores">
+            <div class="cuadro-color">
+                <div class="seleccionado-uno"></div>
+                <div class="seleccionado-dos"></div>
+            </div>
+
+            <div class="paleta">
+                <div class="colores">
+                    <div class="color negro"></div>
+                    <div class="color blanco"></div>
+                    <div class="color verde"></div>
+                    <div class="color morado"></div>
+                    <div class="color rosa"></div>
+                    <div class="color azul"></div>
+                    <div class="color amarillo"></div>
+                    <div class="color turquesa"></div>
+                    <div class="color hotpink"></div>
+                    <div class="color morado"></div>
+                    <div class="color canela"></div>
+                    <div class="color rojo"></div>
+                    <div class="color gris"></div>
+                    <div class="color marron"></div>
+                    <div class="color naranja"></div>
+                    <div class="color violeta"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+</section>
+
+<!--ventana cv-->
+
+<section class="ventana-cv-completa" id="ventana-cv-completa">
+    <section class="barra-ventana" id="barra-ventana" >
+    <h2 class="titulo-cv">CV 👾</h2>
+            <div class="barra-titulos-botones">
+                <div class="win-btn" title="Minimizar">_</div>
+                 <div class="win-btn" title="Maximizar">□</div>
+                <div class="win-btn" title="Cerrar" id="cerrarVentana">✕</div>
+    </section>
+    <section class="menu-ventana" > </section>
+    <section class="contenido-cv">
+
+    <div class="hoja">
+        <section class="circulos-hoja">
+        <div class="circulo-hoja"></div>
+        <div class="circulo-hoja"></div>
+        <div class="circulo-hoja"></div>
+        <div class="circulo-hoja"></div>
+    </section>
+        <section class="texto-hoja">
+            <h2 class="titulos-experiencia">EXPERIENCIA LABORAL</h2>
+
+            <h3>Gestión de redes sociales</h3><p>Fundacion Tomillo 05/2025 - 11/2025</p>
+            <li>Ideación, grabación y edición de contenido para RRSS</li>
+            <li>Gestión de comunidades y RRSS</li>
+
+            <h3>Asistente marketing y ventas</h3><p>English Plus 01/2023 - 06/2023</p>
+            <li>Apoyo a la realización de campañas de marketing</li>
+            <li>Creación de contenido y gestión de RRSS</li>
+            <li>Gestión y captación de clientes</li>
+
+            <h2 class="titulos-experiencia">HERRAMIENTAS</h2>
+            <div class="herramientas-iconos">
+                <img class="png-programa" src="img/Adobe_Photoshop_CC_icon.svg.png" alt=""><img class="png-programa" src="img/Adobe_Premiere_Pro_CC_icon.svg.png" alt=""><img class="png-programa" src="img/Figma-logo.svg.png" alt=""><img class="png-programa" src="img/DaVinci.png" alt="">
+            </div>
+
+            <h2 class="titulos-experiencia">IDIOMAS</h2>
+            <p>Español - Nativo</p>
+            <p>Inglés - C1</p>
+            <p>Japonés - N4</p>
+
+        </section>
+        
+    </div>
+    <div class="carnet">
+        <img class="mi-foto" src="img/foto.jpg" alt="">
+        <div class="titulo-carnet">
+            <h3>Bárbara Moro Aguirre</h3>
+        <h3>Marketing| UX/UI | Front-End</h3>
+    </div>
+        <div class="texto-carnet">
+        <p>📞 634294053</p>
+        <p>✉️ barbaramoroaguirre@gmail.com</p>
+        <p>📌 Madrid</p>
+        </div>
+    </div>
+    <div class="ticket">
+        <h2 class="titulos-ticket">FORMACIÓN Y EDUCACIÓN</h2>
+        <p class="ticket-p">Grado en Marketing</p>
+        <p class="ticket-escuelas">Universidad Rey Juan carlos</p>
+        <li class="ticket-li">TFG: Investigación de mercados de la industria musical internacional.</li>
+        <p class="ticket-p">Máster en Diseño Web y UX/UI</p>
+        <p class="ticket-escuelas">CEI</p>
+        <li class="ticket-li">Accesibilidad Web</li>
+        <li class="ticket-li">HTML, CSS y JavaScript</li>
+        <h2 class="titulos-ticket">CERTIFICACIONES</h2>
+        <p class="ticket-p">Advanced Data Analytics</p>
+        <p class="ticket-escuelas">Google</p>
+        <li class="ticket-li">Translate Data into insights</li>
+        <li class="ticket-li">Foundations of Data Sciense</li>
+        <p class="ticket-p">Fundamentos Marketing Digital </p>
+        <p class="ticket-escuelas">Google</p>
+        <li class="ticket-li">Presencia online, analítica web</li>
+        <p class="ticket-p">Neurociencia empresarial </p>
+        <p class="ticket-escuelas">URJCx</p>
+        <li class="ticket-li">Comportamiento del consumidor</li>
+        <li class="ticket-li">Neuromarketing</li>
+    </div>
+    <div class="post-it"></div>
+</section>
+</section>
+
+<section class="ventana-uxui-completa" id="ventana-uxui-completa">
+        <section class="barra-ventana" id="barra-ventana" >
+            <h2 class="titulo-Proyectos-uxui">Proyectos UX / UI</h2>
+                <div class="barra-titulos-botones">
+                 <div class="win-btn" title="Minimizar">_</div>
+                 <div class="win-btn" title="Maximizar">□</div>
+                 <div class="win-btn" title="Cerrar" id="cerrarVentanaUX">✕</div>
+            </section>
+        <section class="menu-ventana" > </section>
+        <section class="contenido-carpeta">
+
+        <div class="previsualizacion">
+            <div class="cuadro-pre"></div>
+            <div class="cuadro-info"></div>
+        </div>
+
+        <div class="proyecto nova">
+            <img src="img/Carpeta_Ud.png" alt="proyecto-nova">
+            <h2 class="carpeta-proyecto">P. Nova</h2>
+        </div>
+        <div class="proyecto google">
+            <img src="img/Carpeta_Ud.png" alt="proyecto-google">
+            <h2 class="carpeta-proyecto">P. Google</h2>
+        </div>
+        <div class="proyecto netflix">
+            <img src="img/Carpeta_Ud.png" alt="proyecto-netflix">
+            <h2 class="carpeta-proyecto">P. Netflix</h2>
+        </div>
+
+    </section>
+    
+</body>
+</html>
