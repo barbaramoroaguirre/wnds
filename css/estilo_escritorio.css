@@ -31,7 +31,8 @@ body{
     height: 100dvh;
     background-image: url(../img/Fondoo.png) ;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;

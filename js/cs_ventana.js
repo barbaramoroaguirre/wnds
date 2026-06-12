@@ -32,7 +32,8 @@ headerCV.addEventListener('mousedown', (e) => {
 document.addEventListener('mousemove', (e) => {
     if (isDragging) {
         ventanaCV.style.left = e.clientX - offsetX <= document.documentElement.clientWidth - ventanaCV.clientWidth - 10 ? (e.clientX - offsetX) + 'px' : ventanaCV.style.left;
-        ventanaCV.style.top = (e.clientY - offsetY) + 'px';
+        ventanaCV.style.top = e.clientY - offsetY <= document.documentElement.clientHeight - ventanaCV.clientHeight - 35 ? (e.clientY - offsetY) + 'px' : ventanaCV.style.top;
+        
     }
 });
 

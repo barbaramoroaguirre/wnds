@@ -104,6 +104,8 @@
     left: 70px;
     top: 50px;
     box-shadow:2px 2px 0px #470721 ;
+    display: block; /* elimina el espacio fantasma al dibujar con js */
+
 }
 
 .scroll{
