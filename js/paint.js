@@ -54,6 +54,7 @@ function dibujo(event){
     ctx.lineTo(offsetX, offsetY);
 
     ctx.stroke();
+    ctx.strokeStyle = "negro"
     ctx.lineWidth = 3;
 
     //actualizar últimas coordenadas del mouse, para la próxima vez
@@ -67,3 +68,35 @@ function paraDibujar(event){
     dibujando = false;
 
 };
+
+// Seleccionar elementos
+const colores = document.querySelectorAll(".color")
+const seleccionadoUno = document.querySelector(".seleccionado-uno")
+const seleccionadoDos = document.querySelector(".seleccionado-dos")
+
+//guardamos el color que está por defecto como seleccionado al inicio
+seleccionadoUno.style.backgroundColor = "negro"
+
+// Al hacer click en un color
+for (let i = 0; i < colores.length; i++) {
+    colores[i].addEventListener("click", () => {
+
+        colorAnterior = seleccionadoUno.style.backgroundColor  // guarda el color actual antes de cambiarlo
+        // Obtener el color de fondo del div clickado
+        colorActual = getComputedStyle(colores[i]).backgroundColor
+
+        // Actualizar cuadros grandes de la izquierda
+        seleccionadoDos.style.backgroundColor = colorAnterior
+        seleccionadoUno.style.backgroundColor = colorActual
+
+
+        // Actualizar el color del pincel
+        ctx.strokeStyle = colorActual
+
+        // quitar .pulsado a todos
+        colores.forEach(c => c.classList.remove("pulsado"))
+        // añadir .pulsado solo al clickado
+        colores[i].classList.add("pulsado")
+    })
+}
+

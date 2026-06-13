@@ -31,7 +31,7 @@
 
 
 
-    .paint{
+.paint{
     background-color: var(--paint-bg);
     grid-column: 7 / 8;
     grid-row: 2 / 6;
@@ -85,15 +85,16 @@
     
 }
 .tool-btn {
-    width: 24px;
-    height: 24px;
+    width: 23px;
+    height: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--tool-btn);
-    border: #941749 solid 1.2px;
-    box-shadow:1px 1px 0px #470721 ;
+    border: var(--border-light) solid 1.2px;
+    box-shadow:2px 2px 0px var(--border-dark) ;
 }
+
 
 .lienzo{
     background-color: var(--canvas-bg);
@@ -167,7 +168,7 @@
 .seleccionado-uno{
     height: 25px;
     width: 25px;
-    background-color: greenyellow;
+    background-color: black;
     position: absolute;
     top: 8px;
     left: 8px;
@@ -198,8 +199,8 @@
 }
 
 .color{
-    height: 20px;
-    width: 20px;
+    height: 23px;
+    width: 23px;
     border: var(--border-light) solid 1.2px;
     box-shadow:2px 2px 0px var(--border-dark) ;
 }
@@ -247,4 +248,13 @@
 }
 .violeta{
     background-color: rgb(183, 140, 224);
+}
+
+.pulsado{
+    box-shadow:0.5px 0.5px 0px var(--border-dark) ;
+    height: 23px;
+    width: 23px;
+    border: rgb(77, 61, 71) solid 2.5px;
+
+
 }

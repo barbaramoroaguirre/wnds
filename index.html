@@ -86,7 +86,7 @@
         </div>
 
         <div class="menu-lateral">
-            <div class="tool-btn active" title="Pincel" id="pincel">🖌️</div>
+            <div class="tool-btn pulsado" title="Pincel" id="pincel">🖌️</div>
                 <div class="tool-btn" title="Borrador" id="borrador">⬜</div>
                 <div class="tool-btn" title="Linea" id="linea">╱</div>
                 <div class="tool-btn" title="Rectangulo" id="rect">▭</div>
@@ -98,6 +98,7 @@
                 <div class="tool-btn" title="zoom" id="zoom">🔍</div>
         </div>
 
+        <!--especificamos tamaño del canvas en css para evitar deesfases a la hora de interactuar-->
         <canvas class="lienzo" id="canvas" width="470" height="285"></canvas>
 
         <div class="scroll">
@@ -114,7 +115,7 @@
 
             <div class="paleta">
                 <div class="colores">
-                    <div class="color negro"></div>
+                    <div class="color negro pulsado"></div>
                     <div class="color blanco"></div>
                     <div class="color verde"></div>
                     <div class="color morado"></div>
