@@ -783,7 +783,7 @@ body{
 
     .iconos{
         width: 100%;
-        height: 130px;
+        height: 80px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
