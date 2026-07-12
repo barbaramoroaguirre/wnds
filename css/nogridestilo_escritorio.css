@@ -788,7 +788,7 @@ body{
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        margin: 12px;
+        margin: 20px;
         top: 100px;
     }
     .iconos-1{
@@ -800,6 +800,7 @@ body{
         display: flex;
         flex-direction: row;
         gap: 12px;
+        align-items: center;
     }
 
     .img-carpeta{
