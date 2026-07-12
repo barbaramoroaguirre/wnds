@@ -1,7 +1,6 @@
-
-
-
 const huevo = document.getElementById('huevo');
+const personaje = document.querySelector(".img-personaje");
+
 
 huevo.addEventListener('click', () => {
   // Añadimos la clase que contiene la animación
@@ -14,14 +13,26 @@ huevo.addEventListener('click', () => {
 });
 
 
-// seleccionamos el huevo y empezamos el contador de clicks
-const personaje = document.querySelector(".img-personaje")
-let contador = 0
+// empezamos el contador de clicks
+let contador = 0;
 
 // cada vez que se hace click al png, el contador suma 1
 personaje.addEventListener("click", () => {
     contador++
     mostrarNumero(contador)
+
+    if (contador == 20){
+      huevo.src = "img/huevo-abierto.png"
+    }
+
+    //para que cambie con cada 10 clicks, buscamos cuando el resto da 0 en el módulo
+    if (contador > 20 && (contador - 20) % 10 === 0) {
+      if (personaje.src.includes("img/huevo-abierto.png")) {
+        personaje.src = "img/huevo-cerrado.png"
+      }else{
+        personaje.src = "img/huevo-abierto.png"
+      }
+    }
 })
 
 function mostrarNumero(numero) {
