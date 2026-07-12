@@ -788,7 +788,7 @@ body{
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        margin: 30px;
+        gap: 30px;
         top: 100px;
     }
     .iconos-1{
