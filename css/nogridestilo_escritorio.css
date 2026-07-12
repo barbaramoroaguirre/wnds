@@ -787,7 +787,7 @@ body{
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin: 12px;
         top: 100px;
     }
