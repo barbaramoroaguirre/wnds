@@ -4,8 +4,6 @@
 }
 
 #abrirVentanaCV{
-    /*margin: 20px;
-    padding: 10px 20px;*/
     font-size: 16px;
     cursor: pointer;
     background-color: transparent;
@@ -51,8 +49,6 @@
     border-bottom: solid 2px #470721;
 }
 .contenido-cv{
-    /*grid-template-columns: 170px 200px 400px 400px 200px 170px;
-    grid-template-rows: 60px 300px 200px 200px 90px;*/
     position: relative;
     
 }
@@ -212,4 +208,191 @@ p{
     top: 410px;
     left: 60px;
     rotate: 5deg;
+}
+
+/*maquetación pequeña*/
+@media screen and (max-width:650px){
+
+.serpiente{
+    display: none;
+}
+.ventana-cv-completa{
+    display: none;
+    z-index: 1;
+    overflow: hidden ;
+    background-color: #FFF8E6 ;
+    width: 400px;
+    height: 750px;
+    border: var(--border-light) solid 3px;
+    box-shadow:2px 2px 0px var(--border-dark);
+    position: absolute;
+    bottom: 140px;
+    overflow-y: auto;
+    position: absolute;
+
+}
+
+.barra-ventana{
+    border-bottom: solid 1px var(--border-dark);
+    background-color: var(--titlebar);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: titulo;
+    height: 24px;
+    position: sticky;
+}
+
+
+.contenido-cv{
+    display: flex;
+    flex-direction: column;
+}
+.carnet{
+    width: 340px;
+    height: 200px;
+    background-color: #FFEEF4 ;
+    border-radius: 11px;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:2px 2px 0px var(--border-dark);
+    rotate: -3deg;
+    position: relative;
+    top: 15px;
+    z-index: 1;
+    
+}
+.mi-foto{
+    height: 100px;
+    width: 90px;
+    border-radius: 20px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    border: var(--border-dark) solid 1.2px;
+
+}
+.titulo-carnet{
+    margin-left: 130px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+.texto-carnet{
+    margin-top: 35px;
+    margin-left: 20px;
+    
+}
+.hoja{
+    background-color: #FFFFFF;
+    height: 615px;
+    width: 350px;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:1px 1px 0px var(--border-dark);
+    position: relative;
+    left: 20px;
+}
+.circulo-hoja{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: var(--border-dark);
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+.herramientas-iconos{
+    width: 300px;
+    gap: 12px;
+    
+}
+h2{
+    font-family: monospace;
+    font-size: 18px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+.titulos-experiencia{
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    
+}
+
+h3{
+    font-family: monospace;
+    font-size: 17px;
+}
+p{
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 4px;
+}
+.png-programa{
+    height: 35px;
+    width: 35px;
+    margin-left: 6px;
+}
+
+.ticket{
+    width: 350px;
+    height: 600px;
+    background-color: #FDF8F8;
+    border: var(--border-dark) solid 1.2px;
+    box-shadow:2px 2px 0px var(--border-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    rotate: 0deg;
+    margin-bottom: 30px;
+    
+}
+
+.titulos-ticket{
+    text-decoration: underline;
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    margin-left: 16px;
+    
+}
+.ticket-p{
+    font-size: x-large;
+    font-weight: 900;
+    margin-left: 8px;
+    display: block;
+    width: 350px;
+    margin-left: 16px;
+
+
+}
+.ticket-escuelas{
+    font-size: large;
+    font-weight: 800;
+    margin-left: 8px;
+    display: block;
+    width: 350px;
+    margin-left: 16px;
+
+}
+.ticket-li{
+    margin-top: 0px;
+    margin-left: 12px;
+    width: 350px;
+    margin-left: 20px;
+    display: block;
+
+}
+li{
+    list-style: none;
+}
+.post-it{
+   display: none;
+}
+
+
 }
