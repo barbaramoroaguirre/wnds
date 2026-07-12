@@ -4,15 +4,8 @@
 }
 
 #abrirVentanaCV{
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: transparent;
-}
-#abrirVentanaUX{
-    margin: 20px;
-    padding: 10px 20px;
+    /*margin: 20px;
+    padding: 10px 20px;*/
     font-size: 16px;
     cursor: pointer;
     background-color: transparent;

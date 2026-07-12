@@ -29,11 +29,11 @@
      --titlebar:#c2185b;
     }
 
-
+/*
 
 .paint{
     background-color: var(--paint-bg);
-    grid-column: 7 / 8;
+    grid-column: 6 / 8;
     grid-row: 2 / 6;
     position: relative;
     box-shadow:2px 2px 0px #470721 ;
@@ -47,7 +47,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-area: titulo;
     height: 24px;
 }
 .titulo-paint{
@@ -99,8 +98,8 @@
 .lienzo{
     background-color: var(--canvas-bg);
     border: solid 2px var(--titlebar);
-    height: 285px;
     width: 470px;
+    height: 285px;
     position: absolute;
     left: 70px;
     top: 50px;
@@ -108,6 +107,7 @@
     display: block; /* elimina el espacio fantasma al dibujar con js */
 
 }
+/*
 
 .scroll{
     width: 20px;
@@ -115,7 +115,7 @@
     border-left: solid 2px #470721;
     background-color: #f8bbd0;
     position: absolute;
-    right: 0;
+    right: 0px;
     top: 46px;
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@
 }
 .seccion-colores{
     background-color: var(--palette-bg);
-    width: 598px;
+    width: 100%;
     height: 65px;
     position: absolute;
     bottom: 0;
@@ -159,7 +159,7 @@
     align-items: center;
     height: 50px;
     width: 50px;
-    margin: 4px;
+    margin: 8px;
     position: relative;
     border: solid 1.2px #470721;
     box-shadow: 1px 1px var(--shadow);
@@ -182,7 +182,7 @@
     background-color: rgb(146, 45, 146);
     position: absolute;
     bottom: 8px;
-    right: 8px;
+    right: 10px;
     border: #941749 solid 1.2px;
     box-shadow:1px 1px 0px #470721 ;
 }

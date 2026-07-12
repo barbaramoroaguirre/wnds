@@ -1,38 +1,39 @@
+// Seleccionar elementos
 const canvas = document.querySelector("canvas");
+const colores = document.querySelectorAll(".color");
+const seleccionadoUno = document.querySelector(".seleccionado-uno");
+const seleccionadoDos = document.querySelector(".seleccionado-dos");
+const borrador = document.querySelector(".borrador")
+const pincel = document.querySelector(".pincel")
 
 //para pedirle al canvas el contexto del dibujo 2d (pincel)
 const ctx = canvas.getContext("2d");
 
 
-// constantes, diccionario de constantes
-const MODES = {
-    //pincel = 'dibujando'
-    //borra = "borra"
-    //rectangulo = "rectangulo"
-
-};
-//estados
 
 let dibujando = false;
-//ultima posicion del pincel
-let startX, startY;
-let lastX = 0;
-let lastY = 0;
-let mode = MODES.dibujando;
+
+let borrando = false
+let colorActual = "black"  // color por defecto al cargar
+pincel.classList.add("pulsado")  // activo por defecto
+
 
 //eventos
 canvas.addEventListener("mousedown", inicioDibujar);
 canvas.addEventListener("mousemove", dibujo);
 canvas.addEventListener("mouseup", paraDibujar);
+
 //al salir del canvas también deja de dibujar
 canvas.addEventListener("mouseleave", paraDibujar);
 
-//métodos
 
 function inicioDibujar(event){
     dibujando = true;
     //para saber dónde está clickando el usuario, guardar las coordenadas iniciales
     
+    const offsetX = event.offsetX
+    const offsetY = event.offsetY
+
     lastX = offsetX;
     lastY = offsetY;
 
@@ -54,25 +55,26 @@ function dibujo(event){
     ctx.lineTo(offsetX, offsetY);
 
     ctx.stroke();
-    ctx.strokeStyle = "negro"
-    ctx.lineWidth = 3;
+
+    //esto para que "la goma" pinte de blanco
+    if (borrando) {
+    ctx.strokeStyle = "white"
+    ctx.lineWidth = 20
+    } else {
+    ctx.strokeStyle = colorActual
+    ctx.lineWidth = 3
+    }
 
     //actualizar últimas coordenadas del mouse, para la próxima vez
     lastX = offsetX;
     lastY = offsetY;
-
-
 };
 
 function paraDibujar(event){
     dibujando = false;
-
 };
 
-// Seleccionar elementos
-const colores = document.querySelectorAll(".color")
-const seleccionadoUno = document.querySelector(".seleccionado-uno")
-const seleccionadoDos = document.querySelector(".seleccionado-dos")
+
 
 //guardamos el color que está por defecto como seleccionado al inicio
 seleccionadoUno.style.backgroundColor = "negro"
@@ -100,3 +102,19 @@ for (let i = 0; i < colores.length; i++) {
     })
 }
 
+// evento de borrador
+
+borrador.addEventListener('click', () => {
+    borrando = true
+    canvas.classList.add("modo-goma")
+    borrador.classList.add("pulsado")
+    pincel.classList.remove("pulsado")
+
+})
+
+pincel.addEventListener('click', () => {
+    borrando = false
+    canvas.classList.remove("modo-goma")
+    borrador.classList.remove("pulsado")
+    pincel.classList.add("pulsado")
+})

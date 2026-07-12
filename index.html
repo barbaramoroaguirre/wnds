@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbara windows ver.</title>
-    <link rel="stylesheet" href="css/estilo_escritorio.css">
-    <link rel="stylesheet" href="css/paint.css">
+    <link rel="stylesheet" href="css/nogridestilo_escritorio.css">
     <link rel="stylesheet" href="css/carpeta_proyectos.css">
     <link rel="stylesheet" href="css/ventana_cv.css">
-    <script defer src="java.js"></script>
+    <script defer src="js/java.js"></script>
     <script defer src="js/paint.js"></script>
     <script defer src="js/cs_ventana.js"></script>
 
@@ -18,6 +17,32 @@
     <!--ICONOS-->
 <section class="contenido">
     <section class="iconos">
+
+       <button class="carpeta CV" id="abrirVentanaCV">
+            <img class="img-carpeta" src="img/cv.png" alt="CV">
+            <h2 class="nombre-carpeta">Curriculum</h2>
+        </button>
+
+        <button class="carpeta DW" id="">
+            <img class="img-carpeta" src="img/dw.png" alt="DW">
+            <h2 class="nombre-carpeta">Juego</h2>
+        </button>
+
+        <!--target="_blank" para abrir en otra pestaña-->
+
+        <a class="carpeta UXUI enlace-icono"  href="https://barbaramoroaguirre.framer.ai/" target="_blank" rel="noopener noreferrer">
+            <img class="img-carpeta" src="img/carpeta_ud.png" alt="UXUI">
+            <h2 class="nombre-carpeta">Portfolio</h2>
+        </a>
+
+        <a class="carpeta LINKEDIN enlace-icono" href="https://www.linkedin.com/in/bárbara-moro-aguirre-825255198/" target="_blank" rel="noopener noreferrer">
+            <img class="img-carpeta" src="img/LinkedIn.png" alt="LINKEDIN">
+            <h2 class="nombre-carpeta">linkedin</h2>
+        </a>
+
+    
+
+        <!--
         <button class="carpeta CV" id="abrirVentanaCV">
             <img class="img-carpeta" src="img/cv.png" alt="CV">
             <h2 class="nombre-carpeta">Curriculum</h2>
@@ -37,7 +62,7 @@
             <img class="img-carpeta" src="img/LinkedIn.png" alt="LINKEDIN" ></img>
             <h2 class="nombre-carpeta">LinkedIn</h2>
         </a>
-
+        -->
     </section>
 
     <!--BARRA NAV-->
@@ -53,19 +78,13 @@
         </div>
     </section>
 
-    <!--NOTA-->
-    <section class="nota">
-        <ol>
-            <li class="lista-nota">diseñar iconos fondo y personaje</li>
-            <li class="lista-nota">actualizar estilos colores</li>
-            <li class="lista-nota">bocadillo personaje</li>
-        </ol>
-    </section>
-    <!--moñeco-->
+     <!--moñeco-->
     <section class="personaje">
             <img class="img-personaje" src="img/egg.png" alt="" id="huevo">
         
     </section>
+
+
 
     <!--PAINT-->
     <section class="paint">
@@ -86,16 +105,14 @@
         </div>
 
         <div class="menu-lateral">
-            <div class="tool-btn pulsado" title="Pincel" id="pincel">🖌️</div>
-                <div class="tool-btn" title="Borrador" id="borrador">⬜</div>
+                <div class="tool-btn pincel" title="Pincel" id="pincel">🖌️</div>
+                <div class="tool-btn borrador" title="Borrador" id="borrador">⬜</div>
                 <div class="tool-btn" title="Linea" id="linea">╱</div>
                 <div class="tool-btn" title="Rectangulo" id="rect">▭</div>
                 <div class="tool-btn" title="Elipse" id="elipse">◯</div>
                 <div class="tool-btn" title="Relleno" id="relleno">🪣</div>
                 <div class="tool-btn" title="Texto" id="text">A</div>
                 <div class="tool-btn" title="Selector" id="selector">⊹</div>
-                <div class="tool-btn" title="Cuentagotas" id="Cuentagotas">💉</div>
-                <div class="tool-btn" title="zoom" id="zoom">🔍</div>
         </div>
 
         <!--especificamos tamaño del canvas en css para evitar deesfases a la hora de interactuar-->
@@ -140,7 +157,7 @@
 </section>
 
 <!--ventana cv-->
-
+<!---->
 <section class="ventana-cv-completa" id="ventana-cv-completa">
     <section class="barra-ventana" id="barra-ventana" >
     <h2 class="titulo-cv">CV 👾</h2>
