@@ -1132,6 +1132,10 @@ body{
         text-decoration: none;
     }
 
+    a{
+        text-decoration: none;
+    }
+
     
     .personaje{
         height: 150px;
