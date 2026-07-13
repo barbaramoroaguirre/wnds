@@ -116,6 +116,7 @@ h2{
 h3{
     font-family: monospace;
     font-size: 20px;
+    margin-top: 30px;
 }
 p{
     font-family: monospace;
@@ -280,14 +281,17 @@ p{
     margin-top: 25px;
     font-size: 18px;
 }
+.h3-carnet{
+    margin-top: 3px;
+}
 .texto-carnet{
-    margin-top: 35px;
+    margin-top: 28px;
     margin-left: 20px;
     
 }
 .hoja{
     background-color: #FFFFFF;
-    height: 615px;
+    height: 660px;
     width: 350px;
     border: var(--border-dark) solid 1.2px;
     box-shadow:1px 1px 0px var(--border-dark);

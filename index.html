@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbara windows ver.</title>
-    <link rel="stylesheet" href="css/nogridestilo_escritorio.css">
-    <link rel="stylesheet" href="css/carpeta_proyectos.css">
+    <link rel="stylesheet" href="css/style_escritorio.css">
+    <link rel="stylesheet" href="css/calculadora.css">
     <link rel="stylesheet" href="css/ventana_cv.css">
     <script defer src="js/huevo.js"></script>
     <script defer src="js/paint.js"></script>
     <script defer src="js/cs_ventana.js"></script>
-
+    <script defer src="js/calculadora.js"></script>
+    
 </head>
 <body>
 
@@ -23,9 +24,9 @@
             <h2 class="nombre-carpeta">Curriculum</h2>
         </button>
 
-        <button class="carpeta DW" id="">
-            <img class="img-carpeta" src="img/dw.png" alt="DW">
-            <h2 class="nombre-carpeta">Juego</h2>
+        <button class="carpeta CALC" id="abrirCalculadora">
+            <img class="img-carpeta" src="img/dw.png" alt="Calculadora">
+            <h2 class="nombre-carpeta">Calculadora</h2>
         </button>
         </section>
 
@@ -182,8 +183,8 @@
     <div class="carnet">
         <img class="mi-foto" src="img/foto.jpg" alt="">
         <div class="titulo-carnet">
-            <h3>Bárbara Moro Aguirre</h3>
-        <h3>Marketing| UX/UI | Front-End</h3>
+            <h3 class="h3-carnet">Bárbara Moro Aguirre</h3>
+            <h3 class="h3-carnet">Marketing| UX/UI | Front-End</h3>
     </div>
         <div class="texto-carnet">
         <p>📞 634294053</p>
@@ -217,16 +218,44 @@
 </section>
 </section>
 
-<section class="serpiente">
- <section class="barra-ventana" id="barra-ventana" >
-    <h2 class="titulo-cv">serpiente 👾</h2>
-            <div class="barra-titulos-botones">
-                <div class="win-btn" title="Minimizar">_</div>
-                 <div class="win-btn" title="Maximizar">□</div>
-                <div class="win-btn" title="Cerrar" id="cerrarVentana">✕</div>
+<section class="ventana-calc" id="ventanaCalc">
+    <section class="barra-ventana">
+        <h2 class="titulo-calc">Calculadora 🧮</h2>
+        <div class="barra-titulos-botones">
+            <div class="win-btn">_</div>
+            <div class="win-btn">□</div>
+            <div class="win-btn" id="cerrarCalc">✕</div>
+        </div>
     </section>
-    <section class="menu-ventana" > </section>
-    <section class="contenido-serpiente">
+    <section class="contenido-calc">
+        <div class="pantalla-calc" id="pantallaCalc">0</div>
+        <div class="botones-calc">
+            <button class="btn-calc btn-especial" id="btnC">C</button>
+            <button class="btn-calc btn-especial" id="btnPlusMinus">+/-</button>
+            <button class="btn-calc btn-especial" id="btnPorcentaje">%</button>
+            <button class="btn-calc btn-operador" data-op="/">÷</button>
+
+            <button class="btn-calc" data-num="7">7</button>
+            <button class="btn-calc" data-num="8">8</button>
+            <button class="btn-calc" data-num="9">9</button>
+            <button class="btn-calc btn-operador" data-op="*">×</button>
+
+            <button class="btn-calc" data-num="4">4</button>
+            <button class="btn-calc" data-num="5">5</button>
+            <button class="btn-calc" data-num="6">6</button>
+            <button class="btn-calc btn-operador" data-op="-">−</button>
+
+            <button class="btn-calc" data-num="1">1</button>
+            <button class="btn-calc" data-num="2">2</button>
+            <button class="btn-calc" data-num="3">3</button>
+            <button class="btn-calc btn-operador" data-op="+">+</button>
+
+            <button class="btn-calc btn-cero" data-num="0">0</button>
+            <button class="btn-calc" data-num=".">.</button>
+            <button class="btn-calc btn-igual" id="btnIgual">=</button>
+        </div>
+    </section>
+</section>
 
 </section>
     
