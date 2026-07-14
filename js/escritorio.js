@@ -1,5 +1,7 @@
 const huevo = document.getElementById('huevo');
 const personaje = document.querySelector(".img-personaje");
+const reloj = document.getElementById("reloj")
+
 
 
 huevo.addEventListener('click', () => {
@@ -60,3 +62,14 @@ function mostrarNumero(numero) {
     // eliminar el span cuando termine la animación
     setTimeout(() => num.remove(), 800)
 }
+
+//reloj de la barra
+function actualizarReloj() {
+    const ahora = new Date()
+    const horas = String(ahora.getHours()).padStart(2, "0")
+    const minutos = String(ahora.getMinutes()).padStart(2, "0")
+    reloj.textContent = `${horas}:${minutos}`
+}
+
+actualizarReloj() // lo muestra al cargar sin esperar
+setInterval(actualizarReloj, 1000) // lo actualiza cada segundo

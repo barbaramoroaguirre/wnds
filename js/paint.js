@@ -118,3 +118,49 @@ pincel.addEventListener('click', () => {
     borrador.classList.remove("pulsado")
     pincel.classList.add("pulsado")
 })
+
+
+//para que funcione en móvil y tablet, hacemos lo mismo pero con touch
+canvas.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0]
+    const mouseEvent = new MouseEvent("mousedown", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+    })
+    canvas.dispatchEvent(mouseEvent)
+})
+
+canvas.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0]
+    const mouseEvent = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+    })
+    canvas.dispatchEvent(mouseEvent)
+})
+
+canvas.addEventListener("touchend", (e) => {
+    const mouseEvent = new MouseEvent("mouseup", {})
+    canvas.dispatchEvent(mouseEvent)
+})
+
+borrador.addEventListener('touch', () => {
+    borrando = true
+    canvas.classList.add("modo-goma")
+    borrador.classList.add("pulsado")
+    pincel.classList.remove("pulsado")
+
+})
+
+pincel.addEventListener('touch', () => {
+    borrando = false
+    canvas.classList.remove("modo-goma")
+    borrador.classList.remove("pulsado")
+    pincel.classList.add("pulsado")
+})
+
+//para arreglar el desfase del canvas en el móvil
+if (window.innerWidth <= 650) {
+    canvas.width = 225
+    canvas.height = 300
+}

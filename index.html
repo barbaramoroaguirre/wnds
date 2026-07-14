@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style_escritorio.css">
     <link rel="stylesheet" href="css/calculadora.css">
     <link rel="stylesheet" href="css/ventana_cv.css">
-    <script defer src="js/huevo.js"></script>
+    <script defer src="js/escritorio.js"></script>
     <script defer src="js/paint.js"></script>
     <script defer src="js/cs_ventana.js"></script>
     <script defer src="js/calculadora.js"></script>
@@ -33,7 +33,7 @@
         <!--target="_blank" para abrir en otra pestaña-->
         <section class="iconos-2">
         <a class="carpeta UXUI enlace-icono"  href="https://barbaramoroaguirre.framer.ai/" target="_blank" rel="noopener noreferrer">
-            <img class="img-carpeta" src="img/carpeta_ud.png" alt="UXUI">
+            <img class="img-carpeta" src="img/carpeta_ud.png" alt="Portfolio">
             <h2 class="nombre-carpeta">Portfolio</h2>
         </a>
 
@@ -46,20 +46,14 @@
 
     <!--BARRA NAV-->
     <section class="barra">
-        <div class="logo">
-            <h2 class="texto-ventana"></h2>
-        </div>
-        <div class="ventana-paint">
-            <h2 class="texto-ventana">Paint</h2>
-        </div>
         <div class="hora">
-            <h2 class="texto-ventana" id="reloj">hora</h2>
+            <h2 class="texto-ventana" id="reloj"></h2>
         </div>
     </section>
 
-     <!--moñeco-->
+     <!--huevo clicker-->
     <section class="personaje">
-            <img class="img-personaje" src="img/huevo-cerrado.png" alt="" id="huevo">
+            <img class="img-personaje" src="img/huevo-cerrado.png" alt="huevo" id="huevo">
         
     </section>
 
@@ -71,9 +65,9 @@
         <div class="barra-titulo">
             <h2 class="titulo-paint">Untitled - Paint 🎨</h2>
             <div class="barra-titulos-botones">
-                <div class="win-btn" title="Minimizar">_</div>
-                 <div class="win-btn" title="Maximizar">□</div>
-                <div class="win-btn" title="Cerrar">✕</div>
+                <div class="vent-btn" title="Minimizar">_</div>
+                 <div class="vent-btn" title="Maximizar">□</div>
+                <div class="vent-btn" title="Cerrar">✕</div>
             </div>
         </div>
 
@@ -94,7 +88,7 @@
                 <div class="tool-btn" title="Selector" id="selector">⊹</div>
         </div>
 
-        <!--especificamos tamaño del canvas en css para evitar deesfases a la hora de interactuar-->
+        <!--especificamos tamaño del canvas en css para evitar deesfases a la hora de interactuar, esta es la solución propuesta por Claude-->
         <canvas class="lienzo" id="canvas" width="470" height="285"></canvas>
 
         <div class="scroll">
@@ -136,14 +130,13 @@
 </section>
 
 <!--ventana cv-->
-<!---->
 <section class="ventana-cv-completa" id="ventana-cv-completa">
     <section class="barra-ventana" id="barra-ventana" >
     <h2 class="titulo-cv">CV 👾</h2>
             <div class="barra-titulos-botones">
-                <div class="win-btn" title="Minimizar">_</div>
-                 <div class="win-btn" title="Maximizar">□</div>
-                <div class="win-btn" title="Cerrar" id="cerrarVentana">✕</div>
+                <div class="vent-btn" title="Minimizar">_</div>
+                 <div class="vent-btn" title="Maximizar">□</div>
+                <div class="vent-btn" title="Cerrar" id="cerrarVentana">✕</div>
     </section>
     <section class="menu-ventana" > </section>
     <section class="contenido-cv">
@@ -169,7 +162,7 @@
 
             <h2 class="titulos-experiencia">HERRAMIENTAS</h2>
             <div class="herramientas-iconos">
-                <img class="png-programa" src="img/Adobe_Photoshop_CC_icon.svg.png" alt=""><img class="png-programa" src="img/Adobe_Premiere_Pro_CC_icon.svg.png" alt=""><img class="png-programa" src="img/Figma-logo.svg.png" alt=""><img class="png-programa" src="img/DaVinci.png" alt="">
+                <img class="png-programa" src="img/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop"><img class="png-programa" src="img/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere"><img class="png-programa" src="img/Figma-logo.svg.png" alt="Figma"><img class="png-programa" src="img/DaVinci.png" alt="DaVinci">
             </div>
 
             <h2 class="titulos-experiencia">IDIOMAS</h2>
@@ -214,17 +207,16 @@
         <li class="ticket-li">Comportamiento del consumidor</li>
         <li class="ticket-li">Neuromarketing</li>
     </div>
-    <div class="post-it"></div>
 </section>
 </section>
 
 <section class="ventana-calc" id="ventanaCalc">
     <section class="barra-ventana">
-        <h2 class="titulo-calc">Calculadora 🧮</h2>
+        <h2 class="titulo-calc">Calculadora</h2>
         <div class="barra-titulos-botones">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn" id="cerrarCalc">✕</div>
+            <div class="vent-btn">_</div>
+            <div class="vent-btn">□</div>
+            <div class="vent-btn" id="cerrarCalc">✕</div>
         </div>
     </section>
     <section class="contenido-calc">
@@ -232,7 +224,7 @@
         <div class="botones-calc">
             <button class="btn-calc btn-especial" id="btnC">C</button>
             <button class="btn-calc btn-especial" id="btnPlusMinus">+/-</button>
-            <button class="btn-calc btn-especial" id="btnPorcentaje">%</button>
+            <button class="btn-calc btn-especial" id="btnDiv">%</button>
             <button class="btn-calc btn-operador" data-op="/">÷</button>
 
             <button class="btn-calc" data-num="7">7</button>

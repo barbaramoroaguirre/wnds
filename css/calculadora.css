@@ -1,3 +1,41 @@
+/* ─── paleta de colores ─── */
+:root {
+    /* ── fondos ── */
+    --bg:           #FFFEFE;
+    --cv-bg:        #FFF8E6;
+    --canvas-bg:    #ffffff;
+    --blanco:       #fff0f5;
+
+    /* ── rosa principal ── */
+    --titlebar:     #c2185b;
+    --border-dark:  #880E4F;
+    --border-mid:   #e91e8c;
+    --border-light: #fce4ec;
+
+    /* ── superficies UI ── */
+    --paint-bg:     #C48BA0;
+    --menu-bg:      #F48FB1;
+    --menubar-bg:   #f8bbd0;
+    --toolbar-bg:   #f48fb1;
+    --statusbar-bg: #f8bbd0;
+    --palette-bg:   #f48fb1;
+
+    /* ── botones ── */
+    --tool-btn:     #F8BBD0;
+    --btn-face:     #ffcbdf;
+    --btn-shadow:   #ad1457;
+    --btn-hi:       #fce4ec;
+
+    /* ── sombras ── */
+    --shadow:       #b5005088;
+    --shadow-dark:  #47072188;   
+
+    /* ── texto ── */
+    --text-dark:    #4a0030;     
+    --text-light:   #fff0f5;
+}
+
+
 .ventana-calc {
     display: none;
     position: fixed;
@@ -5,8 +43,8 @@
     left: 500px;
     z-index: 1;
     background-color: #f4a7b9;
-    border: solid 1.5px #470721;
-    box-shadow: 2px 2px 0px #470721;
+    border: solid 1.5px var(--shadow-dark);
+    box-shadow: 2px 2px 0px var(--shadow-dark);
     width: 240px;
 }
 .titulo-calc{
@@ -23,14 +61,14 @@
 }
 
 .pantalla-calc {
-    background-color: #fff0f5;
-    border: 2px solid #470721;
-    box-shadow: inset 1px 1px 0px #470721;
+    background-color: var(--text-light);
+    border: 2px solid var(--shadow-dark);
+    box-shadow: inset 1px 1px 0px var(--shadow-dark);
     font-family: monospace;
     font-size: 28px;
     text-align: right;
     padding: 6px 10px;
-    color: #4a0030;
+    color: var(--text-dark);
     min-height: 44px;
     word-break: break-all;
 }
@@ -44,18 +82,18 @@
 .btn-calc {
     background-color: #f8bbd0;
     border: 2px solid;
-    border-color: #fce4ec #880e4f #880e4f #fce4ec;
-    box-shadow: 1px 1px 0px #470721;
+    border-color: var(--btn-hi) var(--btn-shadow) var(--btn-shadow) var(--btn-hi);
+    box-shadow: 1px 1px 0px var(--shadow-dark);
     font-family: monospace;
     font-size: 16px;
-    color: #4a0030;
+    color: var(--text-dark);
     padding: 8px;
     cursor: pointer;
     font-weight: bold;
 }
 
 .btn-calc:active {
-    border-color: #880e4f #fce4ec #fce4ec #880e4f;
+    border-color: var(--btn-hi) var(--btn-shadow) var(--btn-shadow) var(--btn-hi);
     box-shadow: none;
 }
 
@@ -84,6 +122,9 @@
     .ventana-calc {
         left: 70px;
         top: 200px;
-        width: 70vw;
+        width: 50vw;
+    }
+    .titulo-calc{
+        font-size: 14px;
     }
 }
