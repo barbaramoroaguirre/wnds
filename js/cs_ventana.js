@@ -17,7 +17,9 @@ btnCerrarCV.addEventListener('click', () => {
     ventanaCV.style.display = 'none';
 });
 
-// Lógica para arrastrar la ventanaCV
+
+
+// Arrastrar la ventanaCV
 let isDragging = false;
 let offsetX, offsetY;
 

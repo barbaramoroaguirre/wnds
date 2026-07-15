@@ -6,8 +6,6 @@
 /* ─── paleta de colores ─── */
 :root {
     /* ── fondos ── */
-    --bg:           #FFFEFE;
-    --cv-bg:        #FFF8E6;
     --canvas-bg:    #ffffff;
     --blanco:       #fff0f5;
 
@@ -21,8 +19,6 @@
     --paint-bg:     #C48BA0;
     --menu-bg:      #F48FB1;
     --menubar-bg:   #f8bbd0;
-    --toolbar-bg:   #f48fb1;
-    --statusbar-bg: #f8bbd0;
     --palette-bg:   #f48fb1;
 
     /* ── botones ── */
@@ -39,6 +35,8 @@
     --text-dark:    #4a0030;     
     --text-light:   #fff0f5;
 }
+
+
 
 #abrirVentanaCV{
     font-size: 16px;
@@ -62,8 +60,9 @@
 }
 
 .barra-ventana{
-    z-index: 1;
     position: sticky;
+    top: 0;
+    z-index: 1;
     cursor: move; 
     border-bottom: solid 1px var(--border-dark);
     background-color: var(--titlebar);
@@ -72,6 +71,7 @@
     justify-content: space-between;
     height: 24px;
 }
+
 .titulo-cv{
     color: var(--blanco);
     font-family: monospace;
@@ -79,8 +79,9 @@
     font-size: 20px;
 }
 .menu-ventana{
-    z-index: 1;
     position: sticky;
+    top: 24px;
+    z-index: 1;
     background-color: var(--menubar-bg);
     display: flex;
     align-items: center;
@@ -126,7 +127,6 @@
     width: 700px;
     border: var(--border-dark) solid 1.2px;
     box-shadow:1px 1px 0px var(--border-dark);
-    position: absolute;
     bottom: 0;
     top: 25px;
     left: 70px;
@@ -246,16 +246,7 @@ p{
         overflow-y: auto;
 
     }
-    .barra-ventana{
-        z-index: 1;
-        position: sticky;
-        top: 0;
-    }
-    .menu-ventana{
-        z-index: 1;
-        position: sticky;
-        top: 24px;
-    }
+    
     .contenido-cv{
         display: flex;
         flex-direction: column;
@@ -268,17 +259,10 @@ p{
     }
 
     .mi-foto{
-        height: 85px;
-        width: 80px;
         border-radius: 20px;
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        
-
     }
     .titulo-carnet{
-        margin-left: 110px;
+        margin-left: 120px;
         margin-top: 20px;
         font-size: 14px;
     }
@@ -286,7 +270,7 @@ p{
         margin-top: 3px;
     }
     .texto-carnet{
-        margin-top: 20px;
+        margin-top: 34px;
         margin-left: 20px;
         font-size: 16px;
         
@@ -304,11 +288,7 @@ p{
         margin-left: 20px;
     }
 
-    .herramientas-iconos{
-        width: 300px;
-        gap: 12px;
-        
-    }
+
     h2{
         font-size: 20px;
         margin-bottom: 18px;
@@ -367,7 +347,6 @@ p{
 
     }
     .ticket-li{
-        margin-top: 0px;
         margin-left: 12px;
         width: 300px;
         margin-left: 20px;
@@ -427,14 +406,7 @@ p{
         
     }
     .mi-foto{
-        height: 100px;
-        width: 90px;
         border-radius: 20px;
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        border: var(--border-dark) solid 1.2px;
-
     }
     .titulo-carnet{
         margin-left: 130px;
@@ -445,7 +417,7 @@ p{
         margin-top: 3px;
     }
     .texto-carnet{
-        margin-top: 28px;
+        margin-top: 34px;
         margin-left: 20px;
         
     }
@@ -539,9 +511,6 @@ p{
 /* estilos para móvil horizontal */
 @media screen and (max-height: 500px) and (orientation: landscape) {
 
-.paint{
-    display: none;
-}
 .ventana-cv-completa{
     z-index: 1;
     width: 700px;

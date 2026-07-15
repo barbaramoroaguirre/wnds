@@ -1,8 +1,6 @@
 /* ─── paleta de colores ─── */
 :root {
     /* ── fondos ── */
-    --bg:           #FFFEFE;
-    --cv-bg:        #FFF8E6;
     --canvas-bg:    #ffffff;
     --blanco:       #fff0f5;
 
@@ -16,8 +14,6 @@
     --paint-bg:     #C48BA0;
     --menu-bg:      #F48FB1;
     --menubar-bg:   #f8bbd0;
-    --toolbar-bg:   #f48fb1;
-    --statusbar-bg: #f8bbd0;
     --palette-bg:   #f48fb1;
 
     /* ── botones ── */
@@ -35,7 +31,7 @@
     --text-light:   #fff0f5;
 }
 
-
+/*CALCULADORA*/
 .ventana-calc {
     display: none;
     position: fixed;
@@ -117,6 +113,7 @@
     padding-left: 12px;
 }
 
+/*calculadora pantallas pequeñas*/
 
 @media screen and (max-width: 650px) {
     .ventana-calc {

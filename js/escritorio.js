@@ -8,15 +8,19 @@ huevo.addEventListener('click', () => {
   // Añadimos la clase que contiene la animación
   huevo.classList.add('sacudir');
   
-  // Quitamos la clase cuando la animación termina (500 milisegundos)
+
+
+  // Quitamos la clase cuando la animación termina 
   setTimeout(() => {
     huevo.classList.remove('sacudir');
   }, 500); 
 });
 
 
+
 // empezamos el contador de clicks
 let contador = 0;
+
 
 // cada vez que se hace click al png, el contador suma 1
 personaje.addEventListener("click", () => {
@@ -26,6 +30,7 @@ personaje.addEventListener("click", () => {
     if (contador == 20){
       huevo.src = "img/huevo-abierto.png"
     }
+
 
     //para que cambie con cada 10 clicks, buscamos cuando el resto da 0 en el módulo
     if (contador > 20 && (contador - 20) % 10 === 0) {
@@ -37,12 +42,16 @@ personaje.addEventListener("click", () => {
     }
 })
 
+
+
+
 function mostrarNumero(numero) {
     // crear el numero flotante como elemento span desde js
     const num = document.createElement("span")
     num.textContent = "+" + numero
 
-    //para posicionarlo por encima del png, getBoundingClientRect dice dónde esta el png en la pantalla para sacar esas coordenadas automaticamente
+    //para posicionarlo por encima del png, getBoundingClientRect dice dónde esta el png en la pantalla para sacar esas coordenadas automaticamente. 
+    // esto se ha hecho con ayuda de Claude
     num.style.cssText = `
         position: fixed;
         left: ${personaje.getBoundingClientRect().left + 50}px;
@@ -59,17 +68,18 @@ function mostrarNumero(numero) {
     // para que el span sea visible
     document.body.appendChild(num)
 
+
     // eliminar el span cuando termine la animación
     setTimeout(() => num.remove(), 800)
 }
 
+
 //reloj de la barra
-function actualizarReloj() {
-    const ahora = new Date()
-    const horas = String(ahora.getHours()).padStart(2, "0")
-    const minutos = String(ahora.getMinutes()).padStart(2, "0")
-    reloj.textContent = `${horas}:${minutos}`
+
+function cuadroHora() {
+    const hora = new Date()
+    reloj.textContent = hora.toLocaleTimeString()
 }
 
-actualizarReloj() // lo muestra al cargar sin esperar
-setInterval(actualizarReloj, 1000) // lo actualiza cada segundo
+setInterval(cuadroHora, 1000)
+cuadroHora()
